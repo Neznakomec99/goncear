@@ -16,12 +16,23 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <!-- favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="favicon/manifest.json">
-    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#000000">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107785729-1"></script>
@@ -397,7 +408,7 @@
                   <h5 class="text-uppercase mb-4">Feel free to contact me</h5>
                 </div>
               </div>
-              <form action="php/SendMail.php" method="post" class="contact-form text-capitalize" id="contactForm">
+              <form action="https://formspree.io/mpzygoaz" method="POST" onsubmit="success_alert()" class="contact-form text-capitalize" id="contactForm">
                 <div class="form-group row mb-4">
                   <label for="name-input" class="col-4 col-form-label text-right">Your name</label>
                   <div class="col-8">
@@ -426,9 +437,56 @@
                   <div class="col-4 hidden-sm-down"></div>
                   <div class="col-8 send-btn-blk">
                     <button type="submit" class="btn btn-primary mr-auto">Hire me to build your site</button>
-                  </div>
+					<div class="success_alert"></div>
+				  </div>
                 </div>
               </form>
+			   <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+			  <script>
+				window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+				formbutton("create", {
+					action: "https://formspree.io/mpzygoaz",
+					title: "Let's Connect!", 
+					description: "We'll get back to you as soon as possible.",
+					fields: [
+					{
+					  name: "email",
+					  type: "email",
+					  label: "Your Email",
+					  required: true
+					},
+					{
+					  name: "Message",
+					  type: "textarea"
+					},
+					{
+					  type: "submit",
+					  value: "Submit"
+					}],
+					theme: "classic",
+					styles: {
+					  fontFamily:'"Open Sans", sans-serif',
+					  button: {
+						background: "#C4001A"
+					  },
+					  title: {
+						background: "#C4001A",
+						letterSpacing: "0.05em",
+						textTransform: "uppercase",
+						fontFamily:'"Calistoga", sans-serif',
+						fontSize: "2em"
+					  },
+					  checkboxLabel: {
+						display: "flex",
+						flexDirection: "row-reverse"
+					  },
+					  checkboxInput: {
+						margin: "0 0 0 11px"
+					  }
+					},
+					buttonImg: "<i class='fas fa-comment' style='font-size:24px'/>"
+				})
+			  </script>
               <div id="form-messages" class="text-center d-flex flex-column justify-content-center">
                 <span class="icon icon-happy mb-4"></span>
                 <h3>Thank you for your message</h3>

@@ -157,6 +157,8 @@ function loadDaBars() {
       }, 1200);
   });
 }
-
-      
+function success_alert(){
+	$('.success_alert').show()
+    $('.success_alert').text(`Thanks! We'll get back to you as soon as possible!`)
+}
 

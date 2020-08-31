@@ -307,6 +307,9 @@ section#about-me{padding-bottom: 15px;}
 .work-item:hover .card-img-overlay p{opacity: 1;}
 
 /* contact form */
+.success_alert {
+    display: none;
+}
 .form-control {
     height: 40px;
     padding: 10px 15px;
